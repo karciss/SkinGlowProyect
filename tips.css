@@ -1,0 +1,257 @@
+/* Estilos globales */
+* {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E0E4F2; 
+}
+
+header {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+}
+.nav-link:hover {
+    background-color: #707A9E; 
+    border-radius: 15px;
+    color: white;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #9FA8D0; 
+    color: white;
+}
+
+main {
+    padding: 0;
+    margin: 0;
+    padding-top: 76px;
+}
+
+/* Estilos para el buscador */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    border: 1px solid #707A9E; 
+    border-radius: 20px 0 0 20px;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+.search-button {
+    background-color: #9FA8D0; 
+    border: none;
+    padding: 8px 16px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    color: #5f5b75;
+    
+}
+.carousel {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.carousel-img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+h3 {
+    text-align: center;
+    color:  #5f5b75; 
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.carousel-caption p {
+    font-size: 25px;
+    font-weight: bold;
+    color: #5f5b75;
+}
+h1 {
+    text-align: center;
+    color: #5f5b75; 
+    font-weight: bold;
+    font-size: 3em;
+    padding-top: 25px;
+}
+
+#sectionCards .row {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    flex-wrap: wrap;          
+}
+
+#sectionCards .col {
+    display: flex;
+    justify-content: center; 
+}
+
+/* cards */
+
+.card{
+    
+    height: 500px;
+}
+.card-title {
+    color: #555555;
+    font-size: 1.5em;
+    line-height: normal;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+.small-desc {
+    padding-top: 25px;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #39452c;
+}
+
+.small-desc {
+    font-size: 1em;
+}
+
+.go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, rgb(178, 227, 159), #8aad96);
+    border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+    margin-top: -4px;
+    margin-right: -4px;
+    color: white;
+    font-family: courier, sans;
+}
+
+.card {
+    display: block;
+    position: relative;
+    max-width: 300px;
+    max-height: 600px;
+    background-color: #f2f8f9;
+    border-radius: 10px;
+    padding: 2em 1.2em;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #B7E4C7, #92b79f);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: linear-gradient(135deg, #9FA8D0, #6c677d);
+    height: 52px;
+    width: 52px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.5s ease-out;
+}
+
+.card:hover:before {
+    transform: scale(28);
+}
+
+.card:hover .small-desc {
+    transition: all 0.5s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card:hover .card-title {
+    transition: all 0.5s ease-out;
+    color: #ffffff;
+}
+
+/* videos */
+
+.video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-top: 1em; 
+}
+
+/* Estilo del iframe para ajustarlo al contenedor */
+.responsive-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* footer */
+footer {
+    background-color: #b49fc7;
+    padding: 40px 0;
+    font-size: 14px;
+}
+footer .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+footer .contact-info {
+    margin: 20px 0;
+}
+footer .newsletter input {
+    border: 1px solid #ced4da;
+    border-radius: 0;
+}
+footer .social-icons a {
+    margin: 0 10px;
+    color: #ffffff;
+}
+footer .social-icons a:hover {
+    color: #31525a;
+}
+footer .legal-links a {
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+footer .legal-links a:hover {
+    text-decoration: underline;
+}

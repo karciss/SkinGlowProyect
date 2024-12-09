@@ -1,0 +1,239 @@
+
+* {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/fonRe.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Fija la imagen al fondo */
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link:hover {
+    background-color: #B7E4C7; /* azul lavanda */
+    border-radius: 15px;
+    color: white;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+main {
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+
+
+/* log in */
+.container2 {
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+.container2 p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+    color: #6c7a96; /* tono suave basado en #9FA8D0 */
+}
+.container2 span {
+    font-size: 12px;
+    color: #6c7a96;
+}
+.container2 a {
+    color: #52648f; /* tono oscuro basado en #9FA8D0 */
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+.container2 button {
+    background-color: #9FA8D0;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.container2 button.hidden {
+    background-color: transparent;
+    border-color: #ffffff;
+}
+.container2 form {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+.container2 input {
+    background-color: #eff3f9; /* tono claro basado en #9FA8D0 */
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+    color: #52648f;
+}
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+.sign-in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+.container2.active .sign-in {
+    transform: translateX(100%);
+}
+.sign-up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+.container2.active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+@keyframes move {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+.social-icons {
+    margin: 20px 0;
+}
+.social-icons a {
+    border: 1px solid #d3d8e8; /* tono claro basado en #9FA8D0 */
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+.toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+}
+.container2.active .toggle-container {
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+.toggle {
+    background-color: #9fc7ad;
+    background: linear-gradient(to right, #9fc7ad, #9FA8D0);
+    color: #ffffff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+.container2.active .toggle {
+    transform: translateX(50%);
+}
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+.toggle-left {
+    transform: translateX(-200%);
+}
+.container2.active .toggle-left {
+    transform: translateX(0);
+}
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+.container2.active .toggle-right {
+    transform: translateX(200%);
+}
+
+
+
+@media (min-width: 1024px) {
+    .container2 {
+        max-width: 700px; 
+    }
+}
+
+/* Para tabletas */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .container2 {
+        width: 90%; 
+    }
+    main {
+        padding: 1rem;
+    }
+}
+
+
+
+

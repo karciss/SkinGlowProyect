@@ -1,0 +1,178 @@
+* {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #9FA8D0; /* Fondo principal */
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+}
+
+header {
+    padding: 0%;
+    margin: 0%;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: #333333; /* Color estándar de los enlaces */
+}
+
+.nav-link:hover {
+    background-color: #B7E4C7; /* Color de fondo al pasar el ratón */
+    border-radius: 15px;
+    color: #333333; /* Color de texto al pasar el ratón */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #FFFFFF; /* Fondo blanco para el navbar */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera para el navbar */
+}
+
+main {
+    display: flex; /* Habilita Flexbox en el contenedor */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 0;
+    margin: 0;
+    padding-top: 76px; /* Espacio superior para el navbar fijo */
+    width: 100%; /* Asegura que el main ocupe todo el ancho disponible */
+    height: 100vh; /* Hace que el main ocupe toda la altura de la ventana */
+}
+
+.form {
+    background: #FFFFFF; /* Fondo blanco para el formulario */
+    box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01),
+      0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09),
+      0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    position: relative;
+    border-radius: 25px;
+    background-color: #FFFFFF; /* Fondo blanco para un contraste limpio */
+}
+
+.form .label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: fit-content;
+}
+
+.form .label:has(input:focus) .title {
+    top: 0;
+    left: 0;
+    color: #B7E4C7; /* Color de acento en el texto */
+}
+
+.form .label .title {
+    padding: 0 10px;
+    transition: all 300ms;
+    font-size: 12px;
+    color: #8b8e98; /* Color gris para el texto */
+    font-weight: 600;
+    width: fit-content;
+    top: 14px;
+    position: relative;
+    left: 15px;
+    background: #FFFFFF; /* Fondo blanco para que el texto sobresalga */
+}
+
+.form .input-field {
+    width: auto;
+    height: 50px;
+    text-indent: 15px;
+    border-radius: 15px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #21262e; /* Bordes oscuros por defecto */
+    transition: all 0.3s;
+    caret-color: #B7E4C7; /* Color del cursor para mejor visibilidad */
+    color: #333333; /* Color de texto del campo de entrada */
+}
+
+.form .input-field:hover {
+    border-color: #B7E4C7; /* Borde verde claro al pasar el ratón */
+}
+
+.form .input-field:focus {
+    border-color: #B7E4C7; /* Borde verde claro al hacer foco */
+}
+
+.form .split {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+}
+
+.form .split label {
+    width: 130px;
+}
+
+.Btn {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #B7E4C7;
+    border: none;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(202, 226, 164, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  
+  .svgIcon {
+    width: 16px;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .Btn::before {
+    width: calc(100% + 40px);
+    aspect-ratio: 1/1;
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    left: -20px;
+    top: 50%;
+    transform: translate(-150%, -50%);
+    transition-duration: .5s;
+    mix-blend-mode: difference;
+  }
+  
+  .Btn:hover::before {
+    transform: translate(0, -50%);
+  }
+  
+  .Btn:active {
+    transform: translateY(4px);
+    transition-duration: .3s;
+  }

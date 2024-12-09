@@ -1,0 +1,452 @@
+* {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #9FA8D0;
+}
+header{
+    padding: 0%;
+    margin: 0%;
+
+}
+nav {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link:hover {
+    background-color: #B7E4C7; 
+    border-radius: 15px;
+    color: #333333; 
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+main {
+    padding: 0;
+    margin: 0;
+    padding-top: 76px; 
+}
+
+/* Estilos para el buscador */
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    border: 1px solid #E0E0E0;
+    border-radius: 20px 0 0 20px;
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+.search-button {
+    background-color: #B7E4C7; 
+    border: none;
+    padding: 8px 16px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    color: #5f5b75; 
+}
+
+/* carrusel */
+/* Ajustar altura del carrusel */
+.carousel {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+/* Ajustar imágenes dentro del carrusel */
+.carousel-img {
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center; 
+}
+
+
+
+h3 {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    color: #86b9a2;
+}
+.carousel-caption p{
+    font-size: 25px;
+    font-weight: bold;
+    color: #86b9a2;
+}
+
+/* posicionamiento cards */
+
+.productosSkincare {
+    background-color: #E0E7F4;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.productosSkincare .row {
+
+    justify-content: center;
+}
+.productosSkincare .card{
+    margin:0 auto 20px auto;
+}
+
+/* cards */
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se acomoden en varias filas */
+    justify-content: center;
+    gap: 20px; /* Espacio entre las tarjetas */
+}
+
+
+
+h1 {
+    text-align: center;
+    color: #86b9a2;
+    font-weight: bold;
+    font-size: 3em;
+    padding-top: 25px;
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 2px 6px 8px rgba(83, 60, 102, 0.18);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    
+
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+}
+
+.card-body {
+    padding: 1em;
+}
+
+.card-body h5 {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+
+.card-body p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 1em;
+}
+
+.card-body .btn-primary {
+    background-color: #B7E4C7;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.card-body .btn-primary:hover {
+    background-color: #9FA8D0;
+}
+
+
+/* card carrusel */
+/* From Uiverse.io by JohnnyCSilva */ 
+.cardC {
+    width: 195px;
+    height: 230px;
+    background: #a6e6c8;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .cardC .img{
+    height: 30%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+  }
+  
+  .cardC .textBox {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.2s ease-in-out;
+    z-index: 2;
+  }
+  
+  .cardC .textBox > .text {
+    font-weight: bold;
+  }
+  
+  .cardC .textBox > .head {
+    font-size: 20px;
+  }
+  
+  .cardC .textBox > .price {
+    font-size: 17px;
+  }
+  
+  .cardC .textBox > span {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .cardC:hover > .textBox {
+    opacity: 1;
+  }
+  
+  .cardC:hover > .img {
+    height: 65%;
+    filter: blur(7px);
+    animation: anim 3s infinite;
+  }
+  
+  @keyframes anim {
+    0% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-20px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .cardC:hover {
+    transform: scale(1.04) rotate(-1deg);
+  }
+  
+  
+
+/* animacion img */
+/* Imagen en miniatura */
+.thumbnail {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.09); /* Efecto de zoom al pasar el cursor */
+}
+
+/* Contenedor del Lightbox */
+.lightbox {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Imagen dentro del Lightbox */
+.lightbox img {
+    max-width: 25%;
+    max-height: 80%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    animation: fadeIn 0.3s;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Footer */
+footer {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 2rem 0;
+    display: flex;
+    text-align: center;
+    color: #FFFFFF; 
+    background-color: #9FA8D0; }
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/fonFoot2.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+}
+
+footer > * {
+    position: relative;
+    z-index: 2;
+}
+
+footer h5 {
+    font-weight: bold;
+}
+
+footer p, footer i {
+    color: #ffffff;
+}
+
+footer .text-primary {
+    color: #8bb399; 
+}
+
+footer .bi-facebook, footer .bi-twitter, footer .bi-instagram {
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+footer .bi-facebook:hover,
+footer .bi-twitter:hover,
+footer .bi-instagram:hover {
+    color: #8bb399;
+}
+
+footer hr {
+    border-color: #E0E4F2;
+}
+
+
+
+@media (max-width: 768px) {
+    .lightbox img {
+        max-width: 85%;
+        max-height: 70vh;
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
+}
+
+
+.productosSkincare {
+    background-color: #E0E7F4;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.productosSkincare .container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.productosSkincare .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    width: 100%;
+}
+
+.productosSkincare .col {
+    flex: 0 0 calc(20% - 20px);
+    max-width: calc(20% - 20px);
+    display: flex;
+    justify-content: center;
+}
+
+.productosSkincare .card {
+    width: 100%;
+    margin: 0;
+}
+
+
+@media (max-width: 1200px) {
+    .productosSkincare .col {
+        flex: 0 0 calc(25% - 20px);
+        max-width: calc(25% - 20px);
+    }
+}
+
+@media (max-width: 992px) {
+    .productosSkincare .col {
+        flex: 0 0 calc(33.333% - 20px);
+        max-width: calc(33.333% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .productosSkincare .container {
+        padding: 0 10px;
+    }
+
+    .productosSkincare .row {
+        gap: 15px;
+    }
+
+    .productosSkincare .col {
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 576px) {
+    .productosSkincare .container {
+        padding: 0 20px;
+    }
+
+    .productosSkincare .row {
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .productosSkincare .col {
+        flex: 0 0 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .productosSkincare .card {
+        width: 100%;
+    }
+}
